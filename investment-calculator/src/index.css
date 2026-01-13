@@ -39,7 +39,7 @@ code {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #2b4e99;
 }
 
 #user-input {
@@ -47,7 +47,7 @@ code {
   max-width: 30rem;
   margin: 2rem auto;
   border-radius: 4px;
-  background: linear-gradient(180deg, #307e6c, #2b996d);
+  background: linear-gradient(180deg, #30677e, rgb(92, 111, 153));
 }
 
 #user-input label {
@@ -60,9 +60,18 @@ code {
 #user-input input {
   width: auto;
   padding: 0.5rem;
-  border: 1px solid #76c0ae;
+  border: 1px solid #083493;
   border-radius: 0.25rem;
   background-color: transparent;
-  color: #c2e9e0;
+  color: #c2d6e9;
   font-size: 1rem;
+}
+
+#results {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
 }
