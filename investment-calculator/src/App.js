@@ -4,6 +4,7 @@ import './index.css';
 import Header from './components/Header.jsx';
 import UserInput from './components/UserInput.jsx';
 import Results from './components/Results.jsx';
+import AuthInputs from './components/AuthInputs.jsx';
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -33,7 +34,7 @@ function App() {
           inputIsValid ? <Results input={userInput} /> : <p>Please enter a period greater than zero!</p>
         }
 
-
+        <AuthInputs />
       </>
 
     </div>
