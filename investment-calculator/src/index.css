@@ -75,3 +75,13 @@ code {
   border-spacing: 1rem;
   text-align: right;
 }
+
+label.invalid {
+  color: #f87171;
+}
+
+input.invalid {
+  color: #ef4444;
+  border-color: #f73f3f;
+  background-color: #fed2d2;
+}
