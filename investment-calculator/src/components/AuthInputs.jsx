@@ -22,6 +22,7 @@ export default function AuthInputs() {
   return (
     <div>
       <div>
+        <h1 className="mb-2 text-amber-300 text-xl">User</h1>
         <p>
           <label>Email</label>
           <input
