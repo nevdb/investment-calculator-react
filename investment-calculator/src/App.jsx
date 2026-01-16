@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import './index.css';
-import Header from './components/Header.jsx';
-import UserInput from './components/UserInput.jsx';
-import Results from './components/Results.jsx';
-import AuthInputs from './components/AuthInputs.jsx';
+import "./index.css";
+import Header from "./components/Header.jsx";
+import UserInput from "./components/UserInput.jsx";
+import Results from "./components/Results.jsx";
+import AuthInputs from "./components/AuthInputs.jsx";
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -30,13 +30,14 @@ function App() {
       <>
         <Header />
         <UserInput userInput={userInput} onChangeInput={handleChange} />
-        {
-          inputIsValid ? <Results input={userInput} /> : <p>Please enter a period greater than zero!</p>
-        }
+        {inputIsValid ? (
+          <Results input={userInput} />
+        ) : (
+          <p>Please enter a period greater than zero!</p>
+        )}
 
         <AuthInputs />
       </>
-
     </div>
   );
 }

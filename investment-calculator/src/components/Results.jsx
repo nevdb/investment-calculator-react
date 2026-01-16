@@ -7,7 +7,7 @@ export default function Results({ input }) {
     resultsData[0].interest -
     resultsData[0].annualInvestment;
   return (
-    <table id="results">
+    <table className="max-w-lg my-2 mx-auto p-1 table-fixed text-right">
       <thead>
         <tr>
           <th>Year</th>

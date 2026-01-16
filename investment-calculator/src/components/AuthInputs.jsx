@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BaseInput from "./base/BaseInput";
 
 export default function AuthInputs() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,39 +16,43 @@ export default function AuthInputs() {
       setEnteredPassword(value);
     }
   }
+
   function handleLogin() {
     setSubmitted(true);
   }
 
   return (
-    <div>
+    <div className="max-w-lg mx-auto my-4 shadow-md bg-gradient-to-b from-zinc-700 to-zinc-800">
       <div>
-        <p>
-          <label className={`label ${emailNotValid ? "invalid" : ""}`}>
-            Email
-          </label>
-          <input
-            type="email"
-            // style={{ backgroundColor: emailNotValid ? "#fed2d2" : "30677e" }}
-            className={emailNotValid ? "invalid" : undefined}
-            onChange={(event) => handleInputChange("email", event.target.value)}
-          />
-        </p>
-        <p>
-          <label className={`label ${passwordNotValid ? "invalid" : ""}`}>
-            Password
-          </label>
-          <input
-            type="password"
-            className={passwordNotValid ? "invalid" : undefined}
-            onChange={(event) =>
-              handleInputChange("password", event.target.value)
-            }
-          />
-        </p>
+        <h1 className="mb-2 text-amber-300 text-xl">User</h1>
+
+        <BaseInput
+          label={"Email"}
+          invalid={emailNotValid}
+          onChange={(event) =>
+            handleInputChange("password", event.target.value)
+          }
+        />
+        <BaseInput
+          label={"Password"}
+          invalid={passwordNotValid}
+          onChange={(event) =>
+            handleInputChange("password", event.target.value)
+          }
+        />
       </div>
-      <div>
-        <button type="button" onClick={handleLogin}>
+      <div className="my-4">
+        <button
+          type="button"
+          className="text-amber-300 hover:text-amber-500 mr-2"
+        >
+          Create a new account
+        </button>
+        <button
+          className="border border-amber-200 text-amber-300 hover:text-amber-500 px-4 py-2 rounded-md "
+          type="button"
+          onClick={handleLogin}
+        >
           Sign In
         </button>
       </div>
