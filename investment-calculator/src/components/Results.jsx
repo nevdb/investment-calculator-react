@@ -2,10 +2,16 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Results({ input }) {
   const resultsData = calculateInvestmentResults(input);
+
+  if (resultsData.length === 0) {
+    return <p className="center">Invalid input data provided</p>;
+  }
+
   const initialInvestment =
     resultsData[0].valueEndOfYear -
     resultsData[0].interest -
     resultsData[0].annualInvestment;
+
   return (
     <table className="max-w-lg my-2 mx-auto p-1 table-fixed text-right">
       <thead>
